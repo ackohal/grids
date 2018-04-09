@@ -1,27 +1,37 @@
+body{
+  min-width: 350px;
+}
+
 .wrap {
   width: 80%;
   margin: 0 auto;
 }
 
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
 }
+/* Header & Navigation */
 
 header{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
-  height: 300px;
-  background-color: white;
+  margin-top: 2rem;
+  display: flex;
+  background-color: orange;
+  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: flex-end;
   margin-bottom: 2rem;
 }
 
-nav{
+header img{
+  margin-right: auto;
+}
 
+nav{
   background-color: white;
 }
 
@@ -29,6 +39,10 @@ nav a{
   text-transform: uppercase;
   color: grey;
   font-size: 1.2rem;
+}
+
+nav li:nth-child(-n+4){
+  margin-right: 2rem;
 }
 
 nav a:hover{
@@ -56,4 +70,37 @@ main img{
 main img:hover{
   transform: scale(1.1);
   transition: 0.2s;
+}a
+
+/* Footer */
+footer{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 824px) {
+  nav ul{
+    display: flex;
+    align-items:  center;
+    flex-direction: column;
+    }
+
+  nav li:nth-child(-n+4){
+    margin-right: 0;
+  }
+
+  nav li{
+    margin: 0.5rem 0;
+  }
+
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  header img{
+    margin-right: 0;
+  }
 }
